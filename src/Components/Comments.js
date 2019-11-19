@@ -4,10 +4,11 @@ import Comment from './Comment.js'
 
 class Comments extends Component{
     render(){
+        const keys = Object.keys(this.props.comments);
         return(
         <div>
             {/* Comment */}
-            { this.props.comments.map( data => { return <Comment comment={data} /> })}
+            { keys.map( key => { return <Comment comment={this.props.comments[key]} /> })}
         </div>
         );
     }
