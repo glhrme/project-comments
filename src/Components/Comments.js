@@ -7,7 +7,7 @@ const Comments = ({comments}) => {
     return(
     <div>
         {/* Comment */}
-        { keys.map( key => { return <Comment c={comments[key]} /> })}
+        { keys.map( key => { return <Comment key={key} c={comments[key]} /> })}
     </div>
     );
 }
